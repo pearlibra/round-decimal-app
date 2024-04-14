@@ -1,18 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
+  --textarea-bg-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 20, 20, 20;
+    --background-end-rgb: 20, 20, 20;
+    --textarea-bg-rgb: 31, 31, 31;
   }
 }
 
@@ -24,4 +25,22 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+textarea {
+  background-color: rgb(var(--textarea-bg-rgb));
+}
+
+input {
+  color: var(--foreground-rgb);
+  background-color: rgb(var(--textarea-bg-rgb));
+}
+
+h1 {
+  font-size: 44px;
+}
+
+button:hover {
+  color: var(--foreground-rgb);
+  /* color: red; */
 }
